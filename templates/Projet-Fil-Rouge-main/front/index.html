@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+    <script src="./js/lightboxVideo.js" defer></script>
+    <title>Review & Critic - Reviews of Movies, TV show, Games, Musics</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-title">
+        <img src="./img/logo/logoR&C.png" alt="logo-R&C" height="50px" />
+        <h1>Review&Critic</h1>
+      </div>
+      <div class="search-signup">
+        <form action="/form/submit" method="GET">
+          <input
+            type="text"
+            maxlength="20"
+            class="searchbar"
+            placeholder="Search here..."
+          />
+          <!-- <input type="submit" name="submit" class="submit" value="Search"> -->
+        </form>
+        <img
+          class="search-button"
+          src="./img/buttons/seachButton.png"
+          alt="search-button"
+          height="20px"
+        />
+        <button class="sign-in" type="button">Sign In</button>
+      </div>
+    </header>
+
+    <!-- dropdown menu -->
+    <nav class="top-nav">
+      <ul>
+        <li class="nav-items nav-item-dropdown">
+          <a class="dropdown-trigger" href="#TELEVISION">GAMES</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-items"><a href="#">>Game Home<</a></li>
+            <li class="dropdown-menu-items"><a href="#">New Releases</a></li>
+            <li class="dropdown-menu-items"><a href="#">Coming Soon</a></li>
+            <p>Best...</p>
+            <li class="dropdown-menu-items"><a href="#">Games This Year</a></li>
+            <li class="dropdown-menu-items">
+              <a href="#">Games of All Time</a>
+            </li>
+            <li class="dropdown-menu-items"><a href="#">Games by Genre</a></li>
+            <li class="dropdown-menu-items"><a href="#">New Games</a></li>
+            <p>
+              Platforms: <a href="#">PS5</a> <a href="#">XBOX</a>
+              <a href="#">SWITCH</a>
+            </p>
+          </ul>
+        </li>
+
+        <li class="nav-items nav-item-dropdown">
+          <a class="dropdown-trigger" href="#TELEVISION">MOVIES</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-items"><a href="#">>Movie Home<</a></li>
+            <li class="dropdown-menu-items"><a href="#">In Theaters</a></li>
+            <li class="dropdown-menu-items"><a href="#">Coming Soon</a></li>
+            <p>Best...</p>
+            <li class="dropdown-menu-items"><a href="#">Movie This Year</a></li>
+            <li class="dropdown-menu-items">
+              <a href="#">Movie of All Time</a>
+            </li>
+            <li class="dropdown-menu-items"><a href="#">Movie by Genre</a></li>
+            <li class="dropdown-menu-items">
+              <a href="#">Film Awards & Nominations</a>
+            </li>
+            <p>
+              Streaming: <a href="#">Nextflix</a> <a href="#">Amazon</a>
+              <a href="#">Hulu</a>
+            </p>
+          </ul>
+        </li>
+
+        <li class="nav-items nav-item-dropdown">
+          <a class="dropdown-trigger" href="#TELEVISION">TELEVISION</a>
+          <ul class="dropdown-menu-right">
+            <li class="dropdown-menu-items"><a href="#">>TV Home<</a></li>
+            <li class="dropdown-menu-items"><a href="#">TV Calendar</a></li>
+            <li class="dropdown-menu-items"><a href="#">Coming Soon</a></li>
+            <p>Best...</p>
+            <li class="dropdown-menu-items">
+              <a href="#">TV Show This Year</a>
+            </li>
+            <li class="dropdown-menu-items">
+              <a href="#">TV Show of All Time</a>
+            </li>
+            <li class="dropdown-menu-items">
+              <a href="#">TV Show by Genre</a>
+            </li>
+            <li class="dropdown-menu-items"><a href="#">New TV Show</a></li>
+            <p>
+              Streaming: <a href="#">Nextflix</a> <a href="#">Amazon</a>
+              <a href="#">Hulu</a>
+            </p>
+          </ul>
+        </li>
+
+        <li class="nav-items nav-item-dropdown">
+          <a class="dropdown-trigger" href="#TELEVISION">MUSICS</a>
+          <ul class="dropdown-menu-right">
+            <li class="dropdown-menu-items"><a href="#">>Music Home<</a></li>
+            <li class="dropdown-menu-items"><a href="#">New Releases</a></li>
+            <li class="dropdown-menu-items"><a href="#">Coming Soon</a></li>
+            <p>Best...</p>
+            <li class="dropdown-menu-items">
+              <a href="#">Albums This Year</a>
+            </li>
+            <li class="dropdown-menu-items">
+              <a href="#">Albums of All Time</a>
+            </li>
+            <li class="dropdown-menu-items"><a href="#">Albums by Genre</a></li>
+            <li class="dropdown-menu-items"><a href="#">New Albums</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- video-lightbox -->
+    <div id="lightbox">
+      <div class="box">
+        <div class="topbar">
+          <button id="hide_video">Close</button>
+        </div>
+        <div id="wrapper">
+          <div id="ytplayer"></div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- Editor's Pick -->
+      <h2>Editor's Pick</h2>
+      <div class="container-1">
+        <img
+          class="show_video poster"
+          data-video-id="JfVOs4VSpmA"
+          alt="click to see video"
+          src="https://img.youtube.com/vi/JfVOs4VSpmA/mqdefault.jpg"
+        />
+        <div class="container-1-txt">
+          <h3>Spider-Man: No Way Home</h3>
+          <p>Film descriptions Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="container-1">
+        <img
+          class="show_video poster"
+          data-video-id="TJFVV2L8GKs"
+          alt="click to see video"
+          src="https://img.youtube.com/vi/TJFVV2L8GKs/mqdefault.jpg"
+        />
+        <div class="container-1-txt">
+          <h3>The Witcher</h3>
+          <p>Film descriptions Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+
+      <div class="container-1">
+        <img
+          class="show_video poster"
+          data-video-id="E3Huy2cdih0"
+          alt="click to see video"
+          src="https://img.youtube.com/vi/E3Huy2cdih0/mqdefault.jpg"
+        />
+        <div class="container-1-txt">
+          <h3>Elden Ring</h3>
+          <p>Film descriptions Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+
+      <div class="container-1">
+        <img
+          src="./img/posters/8cec4dbb2e0faa8ff7f26279023bbaaa-250h.jpg"
+          alt="film-poster"
+          height="100px"
+          width="100"
+          class="poster"
+        />
+        <div class="container-1-txt">
+          <h3>Film Title</h3>
+          <p>Film descriptions Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+
+      <!-- New and Notable -->
+      <h2>New And Notable</h2>
+      <nav class="nav-notable">
+        <a href="#GAMES">Game</a>
+        <a href="#MOVIES">Movies</a>
+        <a href="#TELEVISION">Television</a>
+        <a href="#MUSICS">Musics</a>
+      </nav>
+      <div class="scroll-h">
+        <img
+          src="./img/posters/8f095626844483d6c09f87bf7b9cf0bf-250h.jpg"
+          alt="film-poster"
+        />
+        <img
+          src="./img/posters/8f095626844483d6c09f87bf7b9cf0bf-250h.jpg"
+          alt="film-poster"
+        />
+        <img
+          src="./img/posters/8f095626844483d6c09f87bf7b9cf0bf-250h.jpg"
+          alt="film-poster"
+        />
+        <img
+          src="./img/posters/8f095626844483d6c09f87bf7b9cf0bf-250h.jpg"
+          alt="film-poster"
+        />
+        <img
+          src="./img/posters/8f095626844483d6c09f87bf7b9cf0bf-250h.jpg"
+          alt="film-poster"
+        />
+      </div>
+
+      <section class="flexbox-big-container">
+        <section class="row-wrap1">
+          <!-- Game Review Score -->
+          <section class="gameScore">
+            <h2>Games Review Score</h2>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Game Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="green-score"><p>90</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Game Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="yellow-score"><p>55</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Game Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="red-score"><p>15</p></div>
+            </div>
+            <div class="button-view">
+              <button class="blackButton" type="button">View More</button>
+            </div>
+          </section>
+
+          <!-- Movies Review Score -->
+          <section class="movieScore">
+            <h2>Movies Review Score</h2>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Movie Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="green-score"><p>90</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Movie Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="yellow-score"><p>55</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Movie Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="red-score"><p>15</p></div>
+            </div>
+            <div class="button-view">
+              <button class="blackButton" type="button">View More</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="row-wrap2">
+          <!-- TV Show Score Review -->
+          <section class="tvScore">
+            <h2>TV Show Review Score</h2>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>TV Show Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="green-score"><p>90</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>TV Show Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="yellow-score"><p>55</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>TV Show Title</h3>
+                <p>Release date</p>
+              </div>
+              <div class="red-score"><p>15</p></div>
+            </div>
+            <div class="button-view">
+              <button class="blackButton" type="button">View More</button>
+            </div>
+          </section>
+
+          <!-- Music Score Review -->
+          <section class="musicScore">
+            <h2>Music Review Score</h2>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Music Title</h3>
+                <p>Artist | Release date</p>
+              </div>
+              <div class="green-score"><p>90</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Music Title</h3>
+                <p>Artist | Release date</p>
+              </div>
+              <div class="yellow-score"><p>55</p></div>
+            </div>
+
+            <div class="flexbox-container-2">
+              <div class="item">
+                <h3>Music Title</h3>
+                <p>Artist | Release date</p>
+              </div>
+              <div class="red-score"><p>15</p></div>
+            </div>
+            <div class="button-view">
+              <button class="blackButton" type="button">View More</button>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logo-footer">
+        <img
+          src="./img/logo/logoR&C.png"
+          alt="logo-R&C"
+          height="60px"
+          width="60px"
+        />
+      </div>
+
+      <nav class="bottom-nav">
+        <a href="#">About</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="logo-social">
+        <a href="https://github.com/Vikarious/Projet-Fil-Rouge" target="_blank"
+          ><img
+            src="./img/socialLogos/GitHub/GitHub-Mark-120px-plus.png"
+            alt="logo-github"
+            height="30px"
+            width="30px"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>
