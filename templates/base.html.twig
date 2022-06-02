@@ -41,7 +41,7 @@
           </li>
         {% else %}
           <li class="nav-item">
-            <a class="sign-in" href="{{ path('app_logout') }}">{{app.user.email}} Logout</a>
+            <a class="sign-in" href="{{ path('app_logout') }}">Connected as {{app.user.name}} Logout</a>
           </li>
         {% endif %}
 

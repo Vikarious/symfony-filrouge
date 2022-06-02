@@ -14,11 +14,17 @@
         'label_attr': {'class': 'label_forms'},
         'attr': {'class': 'champs_forms'}
     }) }}
-        {{ form_row(registrationForm.plainPassword, {
+            {{ form_row(registrationForm.plainPassword, {
             label: 'Password',
             'label_attr': {'class': 'label_forms'},
             'attr': {'class': 'champs_forms'}
         }) }}
+            {{ form_row(registrationForm.name, {
+            label: 'Name/Pseudonym',
+            'label_attr': {'class': 'label_forms'},
+            'attr': {'class': 'champs_forms'}
+        }) }}
+
         </div>
         {{ form_row(registrationForm.agreeTerms) }}
 
