@@ -1,13 +1,13 @@
- ----------------------------- --------  ----------------------------------- 
-  Name                          Method    Path                               
- ----------------------------- --------  ----------------------------------- 
-  admin                         ANY       /admin                             
-  app_home                      ANY       /                                  
-  app_register                  ANY       /register                          
-  app_verify_email              ANY       /verify/email                      
-  app_forgot_password_request   ANY       /reset-password                    
-  app_check_email               ANY       /reset-password/check-email        
-  app_reset_password            ANY       /reset-password/reset/{token}      
+ ----------------------------- --------  -----------------------------------  -----------------------------------
+  Name                          Method    Path                                 Description
+ ----------------------------- --------  -----------------------------------  -----------------------------------
+  admin                         ANY       /admin                               page admin
+  app_home                      ANY       /                                    page home
+  app_register                  ANY       /register                            page inscription
+  app_verify_email              ANY       /verify/email                        verification lien provenant email
+  app_forgot_password_request   ANY       /reset-password                      formulaire de reset de password
+  app_check_email               ANY       /reset-password/check-email          page envoi email reset password
+  app_reset_password            ANY       /reset-password/reset/{token}        
   app_login                     ANY       /login                             
   app_logout                    ANY       /logout                            
- ----------------------------- --------  ----------------------------------- 
+ ----------------------------- --------  -----------------------------------  -----------------------------------
