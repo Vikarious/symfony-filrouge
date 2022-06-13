@@ -41,13 +41,13 @@
           </li>
         {% else %}
           <li class="nav-item">
-            <a class="sign-in" href="{{ path('app_logout') }}">Connected as {{app.user.name}} Logout</a>
+            <a class="sign-in" href="{{ path('app_logout') }}">Connected as {{app.user.name}} / Logout</a>
           </li>
         {% endif %}
 
         {% if is_granted("ROLE_ADMIN") %}
           <li class="nav-item">
-            <a href="{{ path('admin')}}" class="sign-in">Admin</a>
+            <a href="{{ path('admin')}}" class="sign-in">Back Office</a>
           </li>
         {% endif %}
 
