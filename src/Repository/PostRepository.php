@@ -39,6 +39,25 @@ class PostRepository extends ServiceEntityRepository
         }
     }
 
+    public function findPostsHighlight(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.highlight = :highlight')
+            ->setParameter('highlight', true)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    public function findPostsActive(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.active = :active')
+            ->setParameter('active', true)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 //    /**
 //     * @return Post[] Returns an array of Post objects
 //     */

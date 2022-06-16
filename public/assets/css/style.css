@@ -382,79 +382,6 @@ h3 {
   src: url(../font/ProximaNova/ProximaNova-Regular.otf);
 }
 
-@media screen and (min-width: 800px) {
-  main {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .flexbox-big-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .row-wrap1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-  }
-  .row-wrap2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-  }
-  .musicScore,
-  .tvScore,
-  .movieScore,
-  .gameScore {
-    width: 50%;
-  }
-  .container-1 {
-    width: 100%;
-  }
-  .container-1 img {
-    width: 180px;
-    height: 180px;
-    margin-right: 10%;
-  }
-  .searchbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #111;
-    border: 1px solid;
-    border-radius: 5px;
-    border-color: #fff;
-    width: 300px;
-    margin-right: 5px;
-    color: #fff;
-    font-weight: bold;
-    opacity: 1;
-  }
-}
 
 .container-1 {
   display: -webkit-box;
@@ -583,4 +510,99 @@ h3 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.underConstruction {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}  
+
+.underConstruction > a {
+  color: #000;
+  text-align: center;
+}
+.underConstruction > img {
+  width: 600px;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .underConstruction > img {
+    width: 100%;
+  }
+  
+  .flexbox-big-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .row-wrap1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .row-wrap2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .musicScore,
+  .tvScore,
+  .movieScore,
+  .gameScore {
+    width: 50%;
+  }
+  .container-1 {
+    width: 100%;
+  }
+  .container-1 > img {
+    width: 180px;
+    height: 180px;
+    margin-right: 10%;
+  }
+  .searchbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #111;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #fff;
+    width: 300px;
+    margin-right: 5px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 1;
+  }
 }

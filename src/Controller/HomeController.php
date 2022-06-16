@@ -12,11 +12,13 @@ class HomeController extends AbstractController
     #[Route('/', name: 'app_home')]
     public function index(PostRepository $postRepository): Response
     {
-        $posts = $postRepository->findAll();
+        $posts = $postRepository->findPostsActive();
+        $postsHighlight = $postRepository->findPostsHighlight();
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'posts' => $posts,
+            'postsHighlight' => $postsHighlight,
         ]);
     }
 }
