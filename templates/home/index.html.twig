@@ -1,6 +1,5 @@
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
     <!-- video-lightbox -->
     <div id="lightbox">
@@ -18,26 +17,26 @@
       <!-- Editor's Pick -->
       <h2>Editor's Pick</h2>
 
-      {% for postHighlights in postsHighlight %}
+      {% for postHighlight in postsHighlight %}
 
         <!-- Highlight preview-->
-        <div class="container-1">
-            <img src="{{ postHighlights.image }}" class="show_video poster">
+          <div class="container-1" onclick="location.href='{{ path('post_view', {slug: postHighlight.slug}) }}';" style="cursor: pointer;">
+            <img src="{{ postHighlight.image }}" class="show_video poster">
             <div class="container-1-txt">
-              <h3 class="post-title">{{ postHighlights.title }}</h3>
-              <p>{{ postHighlights.content | raw}}</p>
+              <h3 class="post-title">{{ postHighlight.title }}</h3>
+              <p>{{ postHighlight.content | raw}}</p>
             </div>
-        </div>
+          </div>
 
       {% endfor %}
 
       <!-- New and Notable -->
       <h2>New And Notable</h2>
       <nav class="nav-notable">
-        <a href="#GAMES">Game</a>
-        <a href="#MOVIES">Movies</a>
-        <a href="#TELEVISION">Television</a>
-        <a href="#MUSICS">Musics</a>
+        <a href="{{ path('app_page_under_construction') }}">Game</a>
+        <a href="{{ path('app_page_under_construction') }}">Movies</a>
+        <a href="{{ path('app_page_under_construction') }}">Television</a>
+        <a href="{{ path('app_page_under_construction') }}">Musics</a>
       </nav>
       <div class="scroll-h">
         <img
