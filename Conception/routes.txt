@@ -3,11 +3,13 @@
  ----------------------------- --------  -----------------------------------  -----------------------------------
   admin                         ANY       /admin                               page admin
   app_home                      ANY       /                                    page d'accueil
+  
   app_register                  ANY       /register                            page d'inscription
-  app_verify_email              ANY       /verify/email                        verification lien provenant email
+  app_verify_email              ANY       /verify/email                        vérification lien provenant email
   app_forgot_password_request   ANY       /reset-password                      requếte de formulaire de reset de password
   app_check_email               ANY       /reset-password/check-email          page envoi email reset password
   app_reset_password            ANY       /reset-password/reset/{token}        formulaire reset de password
+
   app_login                     ANY       /login                               page de connexion
-  app_logout                    ANY       /logout                              traitement de la deconnexion
+  app_logout                    ANY       /logout                              traitement de la déconnexion
  ----------------------------- --------  -----------------------------------  -----------------------------------
