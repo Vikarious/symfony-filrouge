@@ -18,14 +18,14 @@
       <!-- Editor's Pick -->
       <h2>Editor's Pick</h2>
 
-      {% for post in posts %}
+      {% for postHighlights in postsHighlight %}
 
-        <!-- Post preview-->
+        <!-- Highlight preview-->
         <div class="container-1">
-            <img src="{{ post.image }}" class="show_video poster">
+            <img src="{{ postHighlights.image }}" class="show_video poster">
             <div class="container-1-txt">
-              <h3 class="post-title">{{ post.title }}</h3>
-              <p>{{ post.content | raw}}</p>
+              <h3 class="post-title">{{ postHighlights.title }}</h3>
+              <p>{{ postHighlights.content | raw}}</p>
             </div>
         </div>
 

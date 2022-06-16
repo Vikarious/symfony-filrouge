@@ -43,6 +43,9 @@ class Post
     #[ORM\JoinColumn(nullable: false)]
     private $category;
 
+    #[ORM\Column(type: 'boolean')]
+    private $highlight;
+
     
 
     public function getId(): ?int
@@ -130,6 +133,18 @@ class Post
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function isHighlight(): ?bool
+    {
+        return $this->highlight;
+    }
+
+    public function setHighlight(bool $highlight): self
+    {
+        $this->highlight = $highlight;
 
         return $this;
     }
