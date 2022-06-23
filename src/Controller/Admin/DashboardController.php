@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Post;
 use App\Entity\User;
 use App\Entity\Category;
+use App\Entity\FormContact;
 use App\Controller\Admin\UserCrudController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -49,5 +50,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Users', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Categories', 'fas fa-th-list', Category::class);
         yield MenuItem::linkToCrud('Posts', 'fas fa-newspaper', Post::class);
+        yield MenuItem::linkToCrud('Contacts', 'fa-brands fa-wpforms', FormContact::class);
     }
 }

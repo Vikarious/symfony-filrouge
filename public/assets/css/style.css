@@ -400,6 +400,7 @@ h3 {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-left: 5px;
+  padding-right: 20%;
 }
 
 .container-1-txt > p {
