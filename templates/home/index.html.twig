@@ -20,7 +20,9 @@
       {% for postHighlight in postsHighlight %}
 
         <!-- Highlight preview-->
-          <div class="container-1" onclick="location.href='{{ path('post_view', {slug: postHighlight.slug}) }}';" style="cursor: pointer;">
+          <div class="container-1" 
+          onclick="location.href='{{ path('post_view', {slug: postHighlight.slug}) }}';" 
+          style="cursor: pointer">
             <img src="{{ postHighlight.image }}" class="show_video poster">
             <div class="container-1-txt">
               <h3 class="post-title">{{ postHighlight.title }}</h3>
