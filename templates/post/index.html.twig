@@ -1,8 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="underConstruction">
-        <a href="{{ path('app_home') }}"><p>RETURN TO HOME PAGE</p></a>
-        <img src="{{ asset('assets/img/PageUnderConstruction.png') }}" alt="" >
-    </div>
+    <div class="container-1">
+        <img src="{{ post.image }}" class="show_video poster">
+        <div class="container-1-txt">
+            <h3 class="post-title">{{ post.title }}</h3>
+            <p>{{ post.content | raw }}</p>
+        </div>
+     </div>
+
+    {% if not is_granted("ROLE_USER") %}
+        <p></p>
+    {% else %}
+        {{form(form)}}
+    {% endif %}
+
+    {% for comment in post.comments %}
+        <p>{{comment.content | raw}}</p>
+        <p>{{comment.grade}}</p>
+        <p>comment by user: {{comment.user.name}}</p>
+    {% endfor %}
 {% endblock %}
