@@ -75,6 +75,22 @@ a:visited {color:#ffffff;}
   display: flex;
 }
 
+.posterPost {
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  width: 50%;
+  border-radius: 8px;
+}
+
+/* .posterPost > img {
+  justify-content: center;
+} */
+
+
 .register_resetpassword {
   background-color: #111;
   color: #fff;

@@ -2,26 +2,31 @@
 
 {% block body %}
     <div class="postContainer">
-        <img src="{{ post.image }}" class="show_video poster">
+        <img src="{{ post.image }}" class="show_video posterPost">
         <div class="container-1-txt">
             <h3 class="post-title">{{ post.title }}</h3>
             <p>{{ post.content | raw }}</p>
         </div>
 
-    {% if not is_granted("ROLE_USER") %}
-        <p></p>
-    {% else %}
-        {{form(form)}}
-    {% endif %}
+        {% if not is_granted("ROLE_USER") %}
+            <p>Please sign in to leave a comment: <a class="sign-in" href="{{ path('app_login') }}">Sign In</a></p>
+            <p>Or register if you don't have an account yet: <a class="sign-in" href="{{ path('app_register') }}">Register</a></p>
+        {% else %}
+            {{form(form)}}
+        {% endif %}
 
-    <hr>
-
-    {% for comment in post.comments %}
-        <b>Comment: </b>
-        <p>{{comment.content | raw}}</p>
-        <b>Grade: </b>{{comment.grade}}
-        <p>commented by : {{comment.user.name}}</p>
         <hr>
-    {% endfor %}
-     </div>
+
+        {% if post.comments is not empty %}
+            {% for comment in post.comments %}
+                <b>Comment: </b>
+                <p>{{comment.content | raw}}</p>
+                <b>Grade: </b>{{comment.grade}}
+                <p>commented by : {{comment.user.name}}</p>
+                <hr>
+            {% endfor %}
+            {% else %}
+            <p>There is no comments for this post... Quick be the first to leave a comment!</p>
+        {% endif %}
+    </div>
 {% endblock %}
