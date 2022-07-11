@@ -58,7 +58,19 @@ a:visited {color:#ffffff;}
   font-size: large;
   font-weight: bold;
 }
-
+.blackAnchor {
+  background-color: #111;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+  width: 80%;
+  height: 45px;
+  text-transform: capitalize;
+  font-size: large;
+  margin-top: 5px;
+}
 .container_login{
   display: flex;
 }
@@ -529,12 +541,21 @@ h3 {
   width: 600px;
 }
 
+.post {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 300px  15px 300px ;
+}
+
 @media screen and (min-width: 800px) {
   main {
     margin-left: 20%;
     margin-right: 20%;
   }
-
+  .postContainer {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
   .underConstruction > img {
     width: 100%;
   }

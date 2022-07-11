@@ -6,6 +6,7 @@ use App\Entity\Post;
 use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CommentRepository;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
 #[ORM\UniqueConstraint(
@@ -22,6 +23,11 @@ class Comment
     #[ORM\Column(type: 'text')]
     private $content;
 
+    #[Assert\Range(
+        min: 0,
+        max: 100,
+        notInRangeMessage: 'Your grade must be between {{ min }} and {{ max }}',
+    )]
     #[ORM\Column(type: 'integer')]
     private $grade;
 

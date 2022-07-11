@@ -46,6 +46,7 @@ class PostCrudController extends AbstractCrudController
             BooleanField::new('active'),
             BooleanField::new('highlight'),
             AssociationField::new('category'),
+            AssociationField::new('comments', 'Comments')->hideOnForm(),
         ];
     }
 }

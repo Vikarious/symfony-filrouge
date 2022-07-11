@@ -1,13 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container-1">
+    <div class="postContainer">
         <img src="{{ post.image }}" class="show_video poster">
         <div class="container-1-txt">
             <h3 class="post-title">{{ post.title }}</h3>
             <p>{{ post.content | raw }}</p>
         </div>
-     </div>
 
     {% if not is_granted("ROLE_USER") %}
         <p></p>
@@ -15,9 +14,14 @@
         {{form(form)}}
     {% endif %}
 
+    <hr>
+
     {% for comment in post.comments %}
+        <b>Comment: </b>
         <p>{{comment.content | raw}}</p>
-        <p>{{comment.grade}}</p>
-        <p>comment by user: {{comment.user.name}}</p>
+        <b>Grade: </b>{{comment.grade}}
+        <p>commented by : {{comment.user.name}}</p>
+        <hr>
     {% endfor %}
+     </div>
 {% endblock %}
