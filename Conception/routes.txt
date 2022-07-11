@@ -3,7 +3,11 @@
  ----------------------------- --------  -----------------------------------  -----------------------------------
   admin                         ANY       /admin                               page admin
   app_home                      ANY       /                                    page d'accueil
-  
+  post_view                     ANY       /post/{slug}                         page d'un articles avec commentaire
+  app_page_under_construction   ANY       /page_under_construction             page provisoire des features pas encore développés 
+  app_contact                   ANY       /contact                             page de contacte
+  app_about                     ANY       /about                               page à propos du site
+
   app_register                  ANY       /register                            page d'inscription
   app_verify_email              ANY       /verify/email                        vérification lien provenant email
   app_forgot_password_request   ANY       /reset-password                      requếte de formulaire de reset de password
