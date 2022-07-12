@@ -41,8 +41,8 @@ class PostRepository extends ServiceEntityRepository
 
     public function findPostsHighlight(): array
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.highlight = :highlight')
+        return $this->createQueryBuilder('h')
+            ->andWhere('h.highlight = :highlight')
             ->setParameter('highlight', true)
             ->getQuery()
             ->getResult()
@@ -51,8 +51,8 @@ class PostRepository extends ServiceEntityRepository
 
     public function findPostsActive(): array
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.active = :active')
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.active = :active')
             ->setParameter('active', true)
             ->getQuery()
             ->getResult()

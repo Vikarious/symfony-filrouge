@@ -22,14 +22,13 @@ class HomeController extends AbstractController
         $postsHighlight = $postRepository->findPostsHighlight();
 
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
             'posts' => $posts,
             'postsHighlight' => $postsHighlight,
         ]);
     }
 
     #[Route('/post/{slug}', name: 'post_view')]
-    public function post(Post $post,CommentRepository $commentRepository, Request $request, ManagerRegistry $doctrine): Response
+    public function post(Post $post, Request $request, ManagerRegistry $doctrine): Response
     {
         $comment = new Comment();
 
