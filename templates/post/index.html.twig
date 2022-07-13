@@ -21,9 +21,24 @@
             {% for comment in post.comments %}
                 <b>Comment: </b>
                 {{comment.content | raw}}
-                <b>Grade: </b>{{comment.grade}}
+                {% if comment.grade >= 75 %}
+                        <div class="flexbox-container-2">
+                            <div class="green-score"><p>{{comment.grade}}</p></div>
+                        </div>                    
+                        
+                    {% elseif comment.grade < 35 %}
+                        <div class="flexbox-container-2">
+                            <div class="red-score"><p>{{comment.grade}}</p></div>
+                        </div>
+
+                    {% else %}
+                        <div class="flexbox-container-2">
+                            <div class="yellow-score"><p>{{comment.grade}}</p></div>
+                        </div>                
+                {% endif %}
                 <p>commented by : {{comment.user.name}}</p>
                 <hr>
+                
             {% endfor %}
 
             {% else %}
