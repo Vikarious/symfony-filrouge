@@ -20,11 +20,12 @@
         {% if post.comments is not empty %}
             {% for comment in post.comments %}
                 <b>Comment: </b>
-                <p>{{comment.content | raw}}</p>
+                {{comment.content | raw}}
                 <b>Grade: </b>{{comment.grade}}
                 <p>commented by : {{comment.user.name}}</p>
                 <hr>
             {% endfor %}
+
             {% else %}
             <p>There is no comments for this post... Quick be the first to leave a comment!</p>
         {% endif %}

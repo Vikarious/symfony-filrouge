@@ -17,7 +17,7 @@ class FormContactType extends AbstractType
         $builder
             ->add('email', TextType::class)
             ->add('message', CKEditorType::class)
-            ->add('Submite', SubmitType::class)
+            ->add('send', SubmitType::class)
         ;
     }
 

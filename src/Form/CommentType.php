@@ -16,7 +16,7 @@ class CommentType extends AbstractType
         $builder
             ->add('content', CKEditorType::class)
             ->add('grade')
-            ->add('submite', SubmitType::class)
+            ->add('send', SubmitType::class)
         ;
     }
 
