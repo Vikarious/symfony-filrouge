@@ -15,7 +15,7 @@
             <img src="{{ postHighlight.image }}" class="show_video poster" alt="">
             <div class="container-1-txt">
               <h3 class="post-title">{{ postHighlight.title }}</h3>
-              <p>{{ postHighlight.content | u.truncate(150, '...', true) | raw}}</p>
+              <p>{{ postHighlight.content | u.truncate(160, '...', false) | raw}}</p>
             </div>
           </div>
 
