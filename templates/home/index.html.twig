@@ -1,17 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <!-- video-lightbox -->
-    <div id="lightbox">
-      <div class="box">
-        <div class="topbar">
-          <button id="hide_video">Close</button>
-        </div>
-        <div id="wrapper">
-          <div id="ytplayer"></div>
-        </div>
-      </div>
-    </div>
 
     <main>
       <!-- Editor's Pick -->
@@ -23,7 +12,7 @@
           <div class="container-1" 
           onclick="location.href='{{ path('post_view', {slug: postHighlight.slug}) }}';" 
           style="cursor: pointer">
-            <img src="{{ postHighlight.image }}" class="show_video poster">
+            <img src="{{ postHighlight.image }}" class="show_video poster" alt="">
             <div class="container-1-txt">
               <h3 class="post-title">{{ postHighlight.title }}</h3>
               <p>{{ postHighlight.content | u.truncate(150, '...', true) | raw}}</p>

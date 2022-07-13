@@ -24,6 +24,10 @@ a:visited {color:#ffffff;}
   
 }
 
+.logo-title  img {
+  height: "50px";
+}
+
 .search-signup {
   display: -webkit-box;
   display: -ms-flexbox;

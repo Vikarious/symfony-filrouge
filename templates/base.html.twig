@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-    {# <script src="./js/main.js" defer></script> #}
     <title>Review & Critic - Reviews of Movies, TV show, Games, Musics</title>
   </head>
 
   <body>
     <header>
       <a class="logo-title" href="{{ path('app_home') }}">
-        <img src="{{ asset('assets/img/logo/logoR&C.png') }}" alt="logo-R&C" height="50px" />
+        <img src="{{ asset('assets/img/logo/logoR&C.png') }}" alt="logo-R&C" height="50" />
         <h1>Review&Critic</h1>
       </a>
       <div class="search-signup">
@@ -23,13 +22,12 @@
             class="searchbar"
             placeholder="Search here..."
           />
-          <!-- <input type="submit" name="submit" class="submit" value="Search"> -->
         </form>
         <img
           class="search-button"
           src="{{ asset('assets/img/buttons/seachButton.png') }}"
           alt="search-button"
-          height="20px"
+          height="20"
         />
         {# <button class="sign-in" type="button">Sign In</button> #}
         {% if not is_granted("ROLE_USER") %}
@@ -58,9 +56,9 @@
     <nav class="top-nav">
       <ul>
         <li class="nav-items nav-item-dropdown">
-          <a class="dropdown-trigger" href="{{ path('app_page_under_construction') }}">GAMES</a>
+          <a class="dropdown-trigger" href="#">GAMES</a>
           <ul class="dropdown-menu">
-            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>Game Home<</a></li>
+            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>Game Home&lt;</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">New Releases</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">Coming Soon</a></li>
             <p>Best...</p>
@@ -78,9 +76,9 @@
         </li>
 
         <li class="nav-items nav-item-dropdown">
-          <a class="dropdown-trigger" href="{{ path('app_page_under_construction') }}">MOVIES</a>
+          <a class="dropdown-trigger" href="#">MOVIES</a>
           <ul class="dropdown-menu">
-            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>Movie Home<</a></li>
+            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>Movie Home&lt;</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">In Theaters</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">Coming Soon</a></li>
             <p>Best...</p>
@@ -100,9 +98,9 @@
         </li>
 
         <li class="nav-items nav-item-dropdown">
-          <a class="dropdown-trigger" href="{{ path('app_page_under_construction') }}">TELEVISION</a>
+          <a class="dropdown-trigger" href="#">TELEVISION</a>
           <ul class="dropdown-menu-right">
-            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>TV Home<</a></li>
+            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>TV Home&lt;</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">TV Calendar</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">Coming Soon</a></li>
             <p>Best...</p>
@@ -124,9 +122,9 @@
         </li>
 
         <li class="nav-items nav-item-dropdown">
-          <a class="dropdown-trigger" href="{{ path('app_page_under_construction') }}">MUSICS</a>
+          <a class="dropdown-trigger" href="#">MUSICS</a>
           <ul class="dropdown-menu-right">
-            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>Music Home<</a></li>
+            <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">>Music Home&lt;</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">New Releases</a></li>
             <li class="dropdown-menu-items"><a href="{{ path('app_page_under_construction') }}">Coming Soon</a></li>
             <p>Best...</p>
@@ -150,8 +148,8 @@
         <img
           src="{{ asset('assets/img/logo/logoR&C.png') }}"
           alt="logo-R&C"
-          height="60px"
-          width="60px"
+          height="60"
+          width="60"
         />
       </div>
 
@@ -165,11 +163,10 @@
           ><img
             src="{{ asset('assets/img/socialLogos/GitHub/GitHub-Mark-120px-plus.png') }}"
             alt="logo-github"
-            height="30px"
-            width="30px"
+            height="30"
+            width="30"
         /></a>
       </div>
     </footer>
   </body>
-  <script src="{ asset('assets/js/lightboxVideo.js') }}"></script>
 </html>
