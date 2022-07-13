@@ -4,9 +4,11 @@ namespace App\Controller;
 
 use App\Entity\Post;
 use App\Entity\Comment;
+use App\Entity\Category;
 use App\Form\CommentType;
-use App\Repository\CommentRepository;
 use App\Repository\PostRepository;
+use App\Repository\CommentRepository;
+use App\Repository\CategoryRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,6 +49,17 @@ class HomeController extends AbstractController
         return $this->renderForm('post/index.html.twig', [
             'post' => $post,
             'form' => $form,
+        ]);
+    }
+
+    #[Route('/category/{slug}', name: 'post_category')]
+    public function category(Category $category, CategoryRepository $categoryRepository): Response
+    {
+        $posts = $categoryRepository->findPostByCategory($category);
+
+        return $this->render('home/category.html.twig', [
+            'posts' => $posts,
+            'category'=>$category->getName(),
         ]);
     }
 }

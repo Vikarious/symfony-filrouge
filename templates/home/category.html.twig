@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+
+    <div class="center">
+        <h2>{{category}}</h2>
+    </div>
+
+    {# <pre>
+        {{ dump() }}
+    </pre> #}
+
+    {% for post in posts %}
+
+        <div class="container-1" onclick="location.href='{{ path('post_view', {slug: post.slug}) }}';" style="cursor: pointer">
+            <img src="{{ post.image }}" class="show_video poster" alt="">
+            <div class="container-1-txt">
+                <h3 class="post-title">{{ post.title }}</h3>
+                <p>{{ post.content | u.truncate(160, '...', false) | raw }}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

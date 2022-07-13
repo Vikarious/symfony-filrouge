@@ -39,6 +39,26 @@ class CategoryRepository extends ServiceEntityRepository
         }
     }
 
+    //requête préparée
+    public function findPostByCategory($category): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Post p
+            WHERE p.category IN 
+                (SELECT c 
+                FROM App\Entity\Category c
+                WHERE c = :val)'
+        )
+        ->setParameter('val', $category)// Bind le paramètre
+        ;
+        return $query->getResult();
+    }
+
+
+
 //    /**
 //     * @return Category[] Returns an array of Category objects
 //     */
