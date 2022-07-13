@@ -9,10 +9,6 @@ use App\Repository\CommentRepository;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
-#[ORM\UniqueConstraint(
-    name:'unique_id',
-    columns: ['user_id', 'post_id' ]
-)]
 class Comment
 {
     #[ORM\Id]
