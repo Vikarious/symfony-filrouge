@@ -31,11 +31,19 @@ class ContactController extends AbstractController
             $em = $doctrine->getManager();
             $em->persist($contact);
             $em->flush();
-            return $this->redirectToRoute('app_home');
+            return $this->redirectToRoute('app_contactThanks');
         }
 
         return $this->renderForm('contact/index.html.twig', [
             'form' => $form,
+        ]);
+    }
+
+    #[Route('/contact/feedback-sent', name: 'app_contactThanks')]
+    public function thanks(): Response
+    {
+        return $this->render('contact/thanks.html.twig', [
+
         ]);
     }
 }
